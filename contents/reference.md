@@ -1,5 +1,3 @@
-# Reference
-
 # Property Graph Exchange Format
 
 [https://arxiv.org/abs/1907.03936](https://arxiv.org/abs/1907.03936)

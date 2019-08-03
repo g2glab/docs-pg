@@ -6,5 +6,5 @@ PG Format Documentation
 
    contents/pg-format
    contents/pg-converters
-   contents/reference
+   Reference contents/reference
    contents/appendix
