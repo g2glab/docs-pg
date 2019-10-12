@@ -76,7 +76,7 @@ Create Neptune style nodes/edges files.
 
 Load the data.
 
-    curl -X POST -H 'Content-Type: application/json' http://xxx.us-west-2.neptune.amazonaws.com:xxxx/loader -d'
+    $ curl -X POST -H 'Content-Type: application/json' http://xxx.us-west-2.neptune.amazonaws.com:xxxx/loader -d'
     { "source" : "s3://xxx/",
       "format" : "csv",
       "iamRoleArn" : "arn:aws:iam::xxxx:role/NeptuneLoadFromS3",
