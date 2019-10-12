@@ -1,4 +1,4 @@
-# PG Converters
+# Converters
 
 ## Installation
 
