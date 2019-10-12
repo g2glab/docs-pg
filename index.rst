@@ -1,4 +1,4 @@
-PG Format Documentation
+PG Tools documentation
 ===================
 
 .. toctree::
