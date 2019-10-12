@@ -4,9 +4,9 @@
 
 If **Docker** is installed on your machine, run the following.
 
-    $ alias pg2dot='docker run --rm -v $PWD:/work g2gml/pg:x.x.x pg2dot'
+    $ alias pg2dot='docker run --rm -v $PWD:/work g2glab/pg:0.3.4 pg2dot'
     $ pg2dot --version
-    0.3.1
+    0.3.4
 
 Otherwise, install **Git** and **Node**, then run the following.
   
@@ -15,7 +15,7 @@ Otherwise, install **Git** and **Node**, then run the following.
     $ npm install
     $ npm link
     $ pg2dot --version
-    0.3.1
+    0.3.4
 
 ## Quick start
 
