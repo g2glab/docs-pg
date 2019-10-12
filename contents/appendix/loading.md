@@ -1,4 +1,4 @@
-# Loading into databases
+# Loading to databases
 
 ## Neo4j
 
