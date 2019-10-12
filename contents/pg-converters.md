@@ -17,7 +17,7 @@ Otherwise, install **Git** and **Node**, then run the following.
     $ pg2dot --version
     0.3.1
 
-## Quick Start
+## Quick start
 
 Create sample data.
 
