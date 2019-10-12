@@ -53,7 +53,7 @@ You can generate a PNG image using graphviz.
 ![data](https://user-images.githubusercontent.com/4862919/54224265-658d3380-44b6-11e9-8f24-9a0ffef9c40d.png)
 
 
-## Commands
+## PG commands
 
     $ pg2dot <input_pg_file> <output_path_prefix>
     $ pg2pgx <input_pg_file> <output_path_prefix>
