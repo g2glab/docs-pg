@@ -33,7 +33,7 @@ Start Neo4j console and access its browser ( http://localhost:7474/browser/ ).
 
     $ $NEO4J_DIR/bin/neo4j console
 
-## PGX
+## Oracle Labs PGX
 
 Create sample data.
 
@@ -56,7 +56,7 @@ Run PGX console and load the data.
     $ $PGX_DIR/bin/pgx
     pgx> G = session.readGraphWithProperties("data.pgx.json")
 
-## Neptune
+## Amazon Neptune
 
 Create sample data.
 
