@@ -1,6 +1,6 @@
-# PG serialization
+# Serialization
 
-## PG Format
+## PG format
 
 * A PG file consists of lines that describe nodes and edges.
 * Each line describes one node or one edge.
