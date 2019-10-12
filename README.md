@@ -1,3 +1,3 @@
-# PG Format Documentation
+# PG documentation
 
-[Read the Docs](https://pg-format.readthedocs.io/).
+Go to [Read the Docs](https://pg-format.readthedocs.io/).
