@@ -61,7 +61,7 @@ EBNF notation of the PG format.
     Node       ::= NODE_ID Labels Properties NEWLINE
     Edge       ::= NODE_ID Direction NODE_ID Labels Properties NEWLINE
     Labels     ::= Label*
-    Properties ::= Properties*
+    Properties ::= Property*
     Label      ::= ':' STRING
     Property   ::= STRING ':' Value
     Value      ::= STRING | NUMBER
