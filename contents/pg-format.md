@@ -76,7 +76,7 @@ This format basically follows the rules of the general JSON format and our PG fo
       ]
     }
 
-## Comparing formats
+## Comparing the formats
 
 PG
 
