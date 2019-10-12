@@ -52,7 +52,7 @@ The values in each data type can be written as follows:
     * Should be double quoted if it contains a space, tab, or colon (`:`)
     * To escape double quotes, use `\"`
 
-## JSON-PG
+## JSON-PG format
 
 JSON format is useful when it is processed by web clients, while the PG (flat file) format above is convenient for users and file systems. 
 
