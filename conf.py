@@ -85,7 +85,11 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-# html_theme_options = {}
+html_theme_options = {
+  'logo_only': True,
+  'display_version': False
+}
+html_logo = 'img/g2glab_pg.png'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -134,7 +138,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'g2gml.tex', 'g2gml Documentation',
-     'ryotayamanaka', 'manual'),
+     'g2glab', 'manual'),
 ]
 
 
@@ -154,8 +158,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'g2gml', 'g2gml Documentation',
-     author, 'g2gml', 'One line description of project.',
+    (master_doc, 'pg-format', 'PG Format Documentation',
+     author, 'g2glab', 'One line description of project.',
      'Miscellaneous'),
 ]
 
