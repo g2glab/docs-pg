@@ -2,13 +2,13 @@
 
 ## Installation
 
-If **Docker** is installed on your machine, run the following.
+If **Docker** is installed on your machine, run the following:
 
     $ alias pg2dot='docker run --rm -v $PWD:/work g2glab/pg:0.3.4 pg2dot'
     $ pg2dot --version
     0.3.4
 
-Otherwise, install **Git** and **Node**, then run the following.
+Otherwise, install **Git** and **Node**, then run the following:
   
     $ git clone -b vx.x.x https://github.com/g2glab/pg.git
     $ cd pg
@@ -19,7 +19,7 @@ Otherwise, install **Git** and **Node**, then run the following.
 
 ## Quick start
 
-Create sample data.
+Create some sample data:
 
     $ vi data.pg
 
@@ -30,7 +30,7 @@ Create sample data.
     p1 -> p2 :likes  since:2013
     p1 -- p2 :friend since:2011
 
-Run the `pg2dot` command for example.
+Run the `pg2dot` command as an example:
 
     $ pg2dot data.pg data
     "data.dot" has been created.
@@ -44,7 +44,7 @@ Run the `pg2dot` command for example.
       "p1" -> "p2" [label="friend\l" since="2011" dir=none]
     }
 
-You can generate a PNG image using graphviz.
+You can now generate a PNG image from the converted file using graphviz.
 
     $ dot -T png data.dot -o data.png
 
