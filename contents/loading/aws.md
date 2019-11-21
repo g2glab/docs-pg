@@ -1,5 +1,3 @@
-# Loading to databases
-
 ## Amazon Neptune
 
 Create sample data.
