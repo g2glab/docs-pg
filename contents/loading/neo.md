@@ -15,13 +15,17 @@ $ docker run -d \
 
 Copy Neo4j files to the container.
 
-  $ docker cp <path/to/edges/file> neo4j:/var/lib/neo4j/import/neo.edges
-  $ docker cp <path/to/nodes/file> neo4j:/var/lib/neo4j/import/neo.nodes
+```
+$ docker cp <path/to/edges/file> neo4j:/var/lib/neo4j/import/neo.edges
+$ docker cp <path/to/nodes/file> neo4j:/var/lib/neo4j/import/neo.nodes
+```
 
 e.g.
 
-  $ docker cp output/musician/neo/*.edges neo4j:/var/lib/neo4j/import/neo.edges
-  $ docker cp output/musician/neo/*.nodes neo4j:/var/lib/neo4j/import/neo.nodes
+```
+$ docker cp output/musician/neo/*.edges neo4j:/var/lib/neo4j/import/neo.edges
+$ docker cp output/musician/neo/*.nodes neo4j:/var/lib/neo4j/import/neo.nodes
+```
 
 Import data and reload Neo4j server.
 
