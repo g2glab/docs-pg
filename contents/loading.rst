@@ -1,4 +1,4 @@
-Loadin to databases
+Loading to databases
 ========
 
 .. toctree::

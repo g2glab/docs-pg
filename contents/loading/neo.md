@@ -1,6 +1,6 @@
 # Neo4j
 
-## With Docker
+## Load With Docker
 
 Create Neo4j container.
 
@@ -38,7 +38,7 @@ docker exec neo4j bash -c \
 
 Access to http://localhost:7474 on your web browser to see the imported data.
 
-## Without Docker
+## Load Without Docker
 
 Create sample data.
 
