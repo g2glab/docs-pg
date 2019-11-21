@@ -7,5 +7,5 @@ PG Tools documentation
    contents/overview
    contents/pg-format
    contents/pg-converters
-   contents/appendix
+   contents/loading
    Reference <contents/reference>
