@@ -67,12 +67,12 @@ This format basically follows the rules of the general JSON format and our PG fo
 
     {
       "nodes":[
-        {"id":101, "labels":["person"], "properties":{"name":"Alice", "country":"United States"}}
-      , {"id":102, "labels":["person", "student"], "properties":{"name":"Bob", "country":"Japan"}}
+        {"id":101, "labels":["person"], "properties":{"name":["Alice"], "country":["United States"]}}
+      , {"id":102, "labels":["person", "student"], "properties":{"name":["Bob"], "country":["Japan"]}}
       ],
       "edges":[
-        {"from":101, "to":102, "undirected":true, "labels":["same_school", "same_class"], "properties":{"since":2012}}
-      , {"from":101, "to":102, "labels":["likes"], "properties":{"since":2015}}
+        {"from":101, "to":102, "undirected":true, "labels":["same_school", "same_class"], "properties":{"since":[2012]}}
+      , {"from":101, "to":102, "labels":["likes"], "properties":{"since":[2015]}}
       ]
     }
 
@@ -92,12 +92,12 @@ JSON-PG
 
     {
       "nodes":[
-        {"id":101, "labels":["person"], "properties":{"name":"Alice", "country":"United States"}}
-      , {"id":102, "labels":["person", "student"], "properties":{"name":"Bob", "country":"Japan"}}
+        {"id":101, "labels":["person"], "properties":{"name":["Alice"], "country":["United States"]}}
+      , {"id":102, "labels":["person", "student"], "properties":{"name":["Bob"], "country":["Japan"]}}
       ],
       "edges":[
-        {"from":101, "to":102, "undirected":true, "labels":["same_school", "same_class"], "properties":{"since":2012}}
-      , {"from":101, "to":102, "labels":["likes"], "properties":{"since":2015}}
+        {"from":101, "to":102, "undirected":true, "labels":["same_school", "same_class"], "properties":{"since":[2012]}}
+      , {"from":101, "to":102, "labels":["likes"], "properties":{"since":[2015]}}
       ]
     }
 
