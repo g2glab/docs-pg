@@ -24,6 +24,10 @@
     * If there are multiple lines with the same Node ID, latter ones are ignored
 * Each line can contain arbitrarily many **labels**
 * Each line can contain arbitrarily many **properties**
+* Each property can have multiple values.
+    * The following example has multiple values as `name` property
+
+          101  :person  name:Alice name:Ally country:"United States"
 
 ### Edges
 
@@ -37,20 +41,23 @@
 
 ### Data type
 
+PG format allows the following data types:
+
+* Integer: Written as a sequence of digits
+  * For example, `1`, `009` and `301`
+* Double-precision floating-point number (double): Written as a sequence of digits with exact one period
+  * For example, `1.0`, `2.321` and `001.002`
+* String: Anything else
+  * Should be double quoted if it contains a space, tab, or colon (`:`)
+  * To escape double quotes, use `\"`
+  * For example, `Alice`, `x2`, `"2.00"`, `"United States"` and `"\"Quoted String\""`
+
 Each element can have one of the following data types:
 
 * Node ID: integer or string
 * Label: string
 * Property key: string
 * Property value: integer, double, or string
-
-The values in each data type can be written as follows:
-
-* Integer: Numbers which do NOT contain a period
-* Double: Numbers which contain a period
-* String: Anything else
-    * Should be double quoted if it contains a space, tab, or colon (`:`)
-    * To escape double quotes, use `\"`
 
 ## JSON-PG format
 
