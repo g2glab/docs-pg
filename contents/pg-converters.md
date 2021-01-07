@@ -4,13 +4,13 @@
 
 If **Docker** is installed on your machine, run the following:
 
-    $ alias pg2dot='docker run --rm -v $PWD:/work g2glab/pg:0.3.4 pg2dot'
+    $ alias pg2dot='docker run --rm -v $PWD:/work g2glab/pg:0.4.0 pg2dot'
     $ pg2dot --version
-    0.3.4
+    0.4.0
 
 Otherwise, install **Git** and **Node**, then run the following:
   
-    $ git clone -b vx.x.x https://github.com/g2glab/pg.git
+    $ git clone -b v0.4.0 https://github.com/g2glab/pg.git
     $ cd pg
     $ npm install
     $ npm link
@@ -27,12 +27,12 @@ Create some sample data:
 
     p1 :person name:Bob
     p2 :person name:Alice
-    p1 -> p2 :likes  since:2013
+    p1 -> p2 :likes since:2013
     p1 -- p2 :friend since:2011
 
 Run the `pg2dot` command as an example:
 
-    $ pg2dot data.pg data
+    $ pg2dot data.pg
     "data.dot" has been created.
 
 `data.dot`
@@ -52,10 +52,24 @@ You can now generate a PNG image from the converted file using graphviz.
 
 ![data](https://user-images.githubusercontent.com/4862919/54224265-658d3380-44b6-11e9-8f24-9a0ffef9c40d.png)
 
+## Commands
 
-## PG Tools commands
+PG to graphviz dot:
 
-    $ pg2dot <input_pg_file> <output_path_prefix>
-    $ pg2pgx <input_pg_file> <output_path_prefix>
-    $ pg2neo <input_pg_file> <output_path_prefix>
-    $ pg2aws <input_pg_file> <output_path_prefix>
+    $ pg2dot graph.pg [-p output_path_prefix]
+
+    e.g.
+    $ pg2dot graph.pg -p output/graph
+
+PG to CSV format (for loading to graph databases):
+
+    $ pg2csv graph.pg [-p output_path_prefix] [-d dbms]    
+      dbms = neo | ora | aws
+
+PG to JSON-PG:
+
+    $ pg2json graph.pg [-p output_path_prefix]
+
+JSON-PG to PG:
+
+    $ json2pg graph.json [-p output_path_prefix]

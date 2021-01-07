@@ -1,23 +1,21 @@
 # PG formats
 
-## PG format
-
 * A PG file consists of lines that describe nodes and edges
 * Each line describes one node or one edge
 
 `example.pg`
 
     # NODES
-    101  :person  name:Alice  country:"United States"
-    102  :person  :student  name:Bob  country:Japan
+    101 :person name:Alice country:"United States"
+    102 :person :student name:Bob country:Japan
 
     # EDGES
-    101  -- 102  :same_school  :same_class  since:2012
-    101  -> 102  :likes  since:2015
+    101 -- 102 :same_school :same_club since:2012
+    101 -> 102 :likes since:2015
 
 ### Nodes
 
-    <node_id>  :<label1>  :<label2>  ...  <key1>:<value1>  <key2>:<value2>  ...
+    <node_id> :<label1> :<label2> ... <key1>:<value1> <key2>:<value2> ...
 
 * All elements are separated by space or tab
 * **Node IDs** have to be unique
@@ -27,11 +25,11 @@
 * Each property can have multiple values.
     * The following example has multiple values as `name` property
 
-          101  :person  name:Alice name:Ally country:"United States"
+          101 :person name:Alice name:Ally country:"United States"
 
 ### Edges
 
-    <src_node_id> [->|--] <dst_node_id>  :<label1>  :<label2>  ...  <key1>:<value1>  <key2>:<value2>  ...
+    <src_node_id> [->|--] <dst_node_id> :<label1> :<label2> ... <key1>:<value1> <key2>:<value2> ...
 
 * Basically, edge lines have the same format as node lines
 * However, the first three columns contain **source node ID**, **direction**, and **destination node ID**
@@ -88,12 +86,12 @@ This format basically follows the rules of the general JSON format and our PG fo
 PG
 
     # NODES
-    101  :person  name:Alice  country:"United States"
-    102  :person  :student  name:Bob  country:Japan
+    101 :person name:Alice country:"United States"
+    102 :person :student name:Bob country:Japan
 
     # EDGES
-    101  -- 102  :same_school  :same_class  since:2012
-    101  -> 102  :likes  since:2015
+    101 -- 102 :same_school :same_class since:2012
+    101 -> 102 :likes since:2015
 
 JSON-PG
 
