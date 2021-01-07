@@ -44,12 +44,12 @@ The flat text PG format has the following characteristics, and an example is giv
 **Figure 1.  Example of PG**
 
     # NODES
-    101  :Person  name:Alice  age:15  country:"United States"
-    102  :Person  :Student  name:Bob  country:Japan  country:Germany
+    101 :person name:Alice age:15 country:"United States"
+    102 :person :student name:Bob country:Japan country:Germany
     
     # EDGES
-    101 -- 102  :sameSchool  :sameClass  since:2012
-    102 -> 101  :likes  since:2015
+    101 -- 102 :same_school :same_club since:2012
+    102 -> 101 :likes since:2015
 
 More formally, we describe the PG format in the EBNF notation as follows.
 
@@ -80,12 +80,12 @@ Next, we describe the JSON-PG format which follows the JSON syntax in addition t
       "nodes":[
         {
          "id":101,
-         "labels":["Person"],
+         "labels":["person"],
          "properties":{"name":["Alice"], "age":[15], "country":["United States"]}
         },
         {
          "id":102,
-         "labels":["Person", "Student"],
+         "labels":["person", "student"],
          "properties":{"name":["Bob"], "country":["Japan", "Germany"]}
         }
       ],
@@ -94,7 +94,7 @@ Next, we describe the JSON-PG format which follows the JSON syntax in addition t
          "from":101,
          "to":102,
          "undirected":true,
-         "labels":["sameSchool", "sameClass"],
+         "labels":["same_school", "same_class"],
          "properties":{"since":[2012]}
         },
         {
