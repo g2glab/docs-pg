@@ -83,26 +83,60 @@ This format basically follows the rules of the general JSON format and our PG fo
 
 ## Comparing the formats
 
-PG
+### PG
 
-    # NODES
-    101 :person name:Alice country:"United States"
-    102 :person :student name:Bob country:Japan
+```js
+# NODES
+101 :person name:Alice country:"United States"
+102 :person :student name:Bob country:Japan
 
-    # EDGES
-    101 -- 102 :same_school :same_class since:2012
-    101 -> 102 :likes since:2015
+# EDGES
+101 -- 102 :same_school :same_class since:2012
+101 -> 102 :likes since:2015
+```
 
-JSON-PG
+### JSON-PG
 
-    {
-      "nodes":[
-        {"id":101, "labels":["person"], "properties":{"name":["Alice"], "country":["United States"]}}
-      , {"id":102, "labels":["person", "student"], "properties":{"name":["Bob"], "country":["Japan"]}}
-      ],
-      "edges":[
-        {"from":101, "to":102, "undirected":true, "labels":["same_school", "same_class"], "properties":{"since":[2012]}}
-      , {"from":101, "to":102, "labels":["likes"], "properties":{"since":[2015]}}
-      ]
-    }
+```json
+{
+  "nodes":[
+    {"id":101, "labels":["person"], "properties":{"name":["Alice"], "country":["United States"]}}
+  , {"id":102, "labels":["person", "student"], "properties":{"name":["Bob"], "country":["Japan"]}}
+  ],
+  "edges":[
+    {"from":101, "to":102, "undirected":true, "labels":["same_school", "same_class"], "properties":{"since":[2012]}}
+  , {"from":101, "to":102, "labels":["likes"], "properties":{"since":[2015]}}
+  ]
+}
+```
 
+### Dot (Graphviz)
+
+```json
+digraph "graph" {
+  "p1" [label="person\lp1\l" name="Bob"]
+  "p2" [label="person\lp2\l" name="Alice"]
+  "p1" -> "p2" [label="likes\l" since="2013"]
+  "p1" -> "p2" [label="friend\l" since="2011" dir=none]
+}
+```
+
+### CSV
+
+- Consists of two tables (for nodes and edges, respectively).
+- Property keys and their datatypes are defined in the headers or separately.
+- No method to define undirected edges.
+
+Nodes:
+
+```csv
+p1,person,Bob
+p2,person,Alice
+```
+
+Edges:
+
+```csv
+p1,p2,friend,2011
+p1,p2,likes,2013
+```
