@@ -4,26 +4,26 @@
 
 If **Docker** is installed on your machine, run the following:
 
-    $ alias pg2dot='docker run --rm -v $PWD:/work g2glab/pg:0.4.0 pg2dot'
+    $ alias pg2dot='docker run --rm -v $PWD:/work g2glab/pg:0.4 pg2dot'
     $ pg2dot --version
     0.4.0
 
-Otherwise, install **Git** and **Node**, then run the following:
+Otherwise, install **Git** and **Node**, then run the following with the latest version number:
   
     $ git clone -b v0.4.0 https://github.com/g2glab/pg.git
     $ cd pg
     $ npm install
     $ npm link
     $ pg2dot --version
-    0.3.4
+    0.4.0
 
 ## Quick start
 
 Create some sample data:
 
-    $ vi data.pg
+    $ vi graph.pg
 
-`data.pg`
+`graph.pg`
 
     p1 :person name:Bob
     p2 :person name:Alice
@@ -32,12 +32,12 @@ Create some sample data:
 
 Run the `pg2dot` command as an example:
 
-    $ pg2dot data.pg
-    "data.dot" has been created.
+    $ pg2dot graph.pg
+    "graph.dot" has been created.
 
-`data.dot`
+`graph.dot`
 
-    digraph "data" {
+    digraph "graph" {
       "p1" [label="person\lp1\l" name="Bob"]
       "p2" [label="person\lp2\l" name="Alice"]
       "p1" -> "p2" [label="likes\l" since="2013"]
@@ -46,7 +46,7 @@ Run the `pg2dot` command as an example:
 
 You can now generate a PNG image from the converted file using graphviz.
 
-    $ dot -T png data.dot -o data.png
+    $ dot -T png graph.dot -o graph.png
 
 `data.png`
 
