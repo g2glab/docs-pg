@@ -5,5 +5,5 @@ Loading to databases
    :maxdepth: 1
 
    loading/neo.md
-   loading/pgx.md
+   loading/ora.md
    loading/aws.md
